@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.*
+*.local
+
+# Docker
+*.pid
+*.seed
+*.swp
+docker-compose.override.yml
+
+# VSCode / JetBrains IDEs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Kubernetes
+*.kubeconfig
+.kube/
+*.yaml~
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+terraform.tfvars
+
+# Helm
+charts/
+*.tgz
+release-name/
+
+# ArgoCD generated files
+*.argocd-source.json
+
+# Secret files
+secrets.yaml
+*.key
+*.crt
+*.pem
+
+# Misc
+*.bak
+*.tmp
+*.old
