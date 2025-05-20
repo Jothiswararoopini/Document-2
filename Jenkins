@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Jothiswararoopini/repo.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'docker build -t myapp:${env.BUILD_NUMBER} .'
+            }
+        }
+        stage('Push Image') {
+            steps {
+                sh 'docker push myregistry/myapp:${env.BUILD_NUMBER}'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Trigger ArgoCD sync or update manifests
+            }
+        }
+    }
+}
